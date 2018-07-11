@@ -1,2 +1,12 @@
-"# azure_iot_hub" 
-![alt text](https://csharpcorner-mindcrackerinc.netdna-ssl.com/UploadFile/NewsImages/12062016044349AM/Microsoft%20Azure.jpg)
+# Azure_iot_hub
+
+### Blob
+Azure Blob 儲存體是 Microsoft 針對雲端推出的物件儲存體解決方案。 Blob 儲存體已針對儲存大量非結構化物件資料 (例如文字或二進位資料) 最佳化
+
+適合用來儲存
+1.	瀏覽器可以直接開啟映像或文件
+2.	分散式存取
+3.	串流資料(影片或音樂)
+4.	記錄檔(log)
+5.	儲存備份 還原 資料復原 封存
+6.	提供azure資料
