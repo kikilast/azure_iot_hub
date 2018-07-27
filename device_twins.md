@@ -12,9 +12,9 @@ JSON文件中有四個部分
    *desired properties 和 reported properties 需互相搭配使用，來同步處理配置組態及狀況
 -  Device identity properties:紀錄裝置的metadata
 
-![alt tag](https://i.imgur.com/VKWL43U)
+![alt tag](https://i.imgur.com/VKWL43U.png)
 
-![alt tag](https://i.imgur.com/gpPIzpF)
+![alt tag](https://i.imgur.com/gpPIzpF.png)
 
 標籤、所需屬性和報告屬性全都支援開放式並行存取
 Etag是用來確保標籤資料的一致性，而version則會依照版本的不同有一個遞增直，更新端可以使用版本強制達到更新的一致性(避免裝置和雲端同時存取資料造成資訊不一致)
@@ -28,11 +28,11 @@ $ 代表該資料室唯讀屬性
 2. 裝置對應項的回報屬性
 3. 上傳檔案
 
-![alt tag](https://i.imgur.com/XxTlSGb)
+![alt tag](https://i.imgur.com/XxTlSGb.png)
 
 *當我有需要傳送遙測資訊或是警示的時候，有兩種做法可以用D2C的方式傳送或是夾帶在標籤中，但是建議不要使用第二種，由於裝置到雲端訊息允許高於裝置對應項更新的輸送量，所以有時希望避免針對每則裝置到雲端訊息更新裝置對應項。
 
-![alt tag](https://i.imgur.com/wkEghgS)
+![alt tag](https://i.imgur.com/wkEghgS.png)
 
 ## C2D
 Iot hub 提供3個從裝置端到雲端的功能
@@ -41,6 +41,6 @@ Iot hub 提供3個從裝置端到雲端的功能
 3. 雲端到裝置訊息，適用於對裝置應用程式的單向通知。
 
 
-![alt tag](https://i.imgur.com/QBTQtt9)
+![alt tag](https://i.imgur.com/QBTQtt9.png)
 
-![alt tag](https://i.imgur.com/51qPOVM)
+![alt tag](https://i.imgur.com/51qPOVM.png)
