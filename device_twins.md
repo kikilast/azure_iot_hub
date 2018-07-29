@@ -44,3 +44,22 @@ Iot hub 提供3個從裝置端到雲端的功能
 ![alt tag](https://i.imgur.com/QBTQtt9.png)
 
 ![alt tag](https://i.imgur.com/51qPOVM.png)
+
+## 裝置與模組對應項、作業和訊息路由的 IoT 中樞查詢語言
+
+Source: https://docs.microsoft.com/zh-tw/azure/iot-hub/iot-hub-devguide-query-language
+
+每個「IoT 中樞」查詢都包含 SELECT 和 FROM 子句，以及選擇性的 WHERE 和 GROUP BY 子句。 每個查詢都會在 JSON 文件的集合上執行，例如裝置對應項。 FROM 子句會指出要在其上反覆運算的文件集合 (devices 或 devices.jobs)。 然後，會套用 WHERE 子句中的篩選。 使用彙總時，此步驟的結果會依照 GROUP BY 子句中所指定的方式進行分組。 針對每個群組，會依照 SELECT 子句中所指定的方式產生一個資料列。
+
+### FROM 子句
+FROM <from_specification> 子句只能採用兩個值︰FROM devices (用來查詢裝置對應項) 或 FROM devices.jobs (用來查詢每一裝置的作業詳細資料)。
+
+### WHERE 子句
+WHERE <filter_condition> 子句是選擇性的。 它會指定一或多個條件，而且 FROM 集合中的 JSON 文件必須滿足這些條件，才能納入為結果的一部分。 任何 JSON 文件都必須將指定的條件評估為 "true"，才能併入結果。
+運算式和條件一節中會說明允許的條件。
+
+### SELECT 子句
+SELECT <select_list> 是必要子句，可指定要從查詢擷取的值。 它會指定用來產生新 JSON 物件的 JSON 值。 針對已篩選 (及視需要已分組) 之 FROM 集合子集的每個項目，投影階段會產生一個新的 JSON 物件。 此物件會以 SELECT 子句中所指定的值來建構。
+
+### GROUP BY 子句
+GROUP BY <group_specification> 子句是一個選擇性步驟，會在 WHERE 子句中指定的篩選之後、SELECT 中指定的投影之前執行。 它會根據屬性值來分組文件。 這些群組可用來產生 SELECT 子句中所指定的彙總值。
